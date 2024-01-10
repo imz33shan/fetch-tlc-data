@@ -10,6 +10,8 @@ setup(
         'beautifulsoup4',
         'pyarrow',
         'lxml',
-        'openpyxl'
+        'openpyxl',
+        'fastavro',
+        'pandavro'
     ],
 )

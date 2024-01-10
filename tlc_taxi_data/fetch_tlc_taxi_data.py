@@ -29,6 +29,7 @@ def fetch_datafiles(data_category: str, output_loc: str, output_format: list = [
     import logging  # Added for improved logging
     from bs4 import BeautifulSoup  # Web scraping
     from urllib.parse import urlparse  # URL parsing
+    import pandavro as pdx # To convert DataFrame to avro file format
 
     # Added logging configuration
     logging.basicConfig(level=logging.INFO if verbose else logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -184,6 +185,8 @@ def fetch_datafiles(data_category: str, output_loc: str, output_format: list = [
                     file_df.to_excel(os.path.join(output_loc, file_name + '.xlsx'), index=False)
                 if 'csv' in output_format:
                     file_df.to_csv(os.path.join(output_loc, file_name + '.csv'), index=False)
+                if 'avro' in output_format:
+                    pdx.to_avro(os.path.join(output_loc, file_name + '.avro'), file_df)
 
                 # Delete the DataFrame containing the current file's data to free up memory
                 del file_df
