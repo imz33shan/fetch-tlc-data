@@ -9,9 +9,7 @@ setup(
         'pandas',
         'beautifulsoup4',
         'pyarrow',
-        'lxml',
         'openpyxl',
-        'fastavro',
-        'pandavro'
+        'fastavro'
     ],
 )
