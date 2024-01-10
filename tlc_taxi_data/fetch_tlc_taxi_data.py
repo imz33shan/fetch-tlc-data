@@ -1,4 +1,4 @@
-def fetch_tlc_taxi_data(data_category: str, output_loc: str, output_format: list = ['parquet'],
+def fetch_datafiles(data_category: str, output_loc: str, output_format: list = ['parquet'],
                         start_timestamp: (None, int) = None, end_timestamp: (None, int) = None, verbose: bool = True):
     """
     Fetch input files info from TLC website, returning a success/error message of file saving.
