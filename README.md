@@ -60,7 +60,7 @@ The function checks that input parameters have the correct data type, ensuring c
 * **data_category Check:**
 Ensures that the 'data_category' parameter is one of the allowed values ('yellow_green', 'fhv', 'fhvhv', 'zone-ids'). This ensures that the function operates on valid data categories.
 
-* **Output Format Check:**
+* **output_format Check:**
 Verifies that the 'output_format' parameter contains only allowed values ('parquet', 'avro', 'xlsx', 'csv'). This ensures that the specified output formats are valid.
 
 * **Constraints for 'zone-ids' data_category:**
