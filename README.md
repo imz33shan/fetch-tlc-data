@@ -52,3 +52,27 @@ Start timestamp (UNIX format) for filtering data files.
 End timestamp (UNIX format) for filtering data files.
 * **verbose (bool, default True):**
 If True, additional information is printed during execution.
+
+#### Assertions
+* **Type Checks for Parameters:**
+The function checks that input parameters have the correct data type, ensuring compatibility and preventing unintended usage.
+
+* **data_category Check:**
+Ensures that the 'data_category' parameter is one of the allowed values ('yellow_green', 'fhv', 'fhvhv', 'zone-ids'). This ensures that the function operates on valid data categories.
+
+* **Output Format Check:**
+Verifies that the 'output_format' parameter contains only allowed values ('parquet', 'avro', 'xlsx', 'csv'). This ensures that the specified output formats are valid.
+
+* **Constraints for 'zone-ids' data_category:**
+Enforces constraints specific to the 'zone-ids' data category, ensuring that 'start_timestamp' and 'end_timestamp' must be None for this category.
+
+* **Constraints for Timestamps:**
+Requires that 'start_timestamp' and 'end_timestamp' are not None, ensuring that a time range is specified for data categories other than 'zone-ids'.
+
+## Key Decisions in Data Transformation
+### 1. Monthly Data Files for Easy Processing
+In an effort to streamline data processing and enhance user-friendliness, output data files are saved individually for each month. This approach simplifies analysis and storage, allowing for more efficient handling of data on a monthly basis. Each file follows a clear naming convention, indicating the data category and the specific month and year, promoting a well-organized and easily navigable dataset.
+### 2. Timestamp Format Conversion
+The original timestamp format in the dataset is transformed to UNIX format (in seconds). This change improves compatibility and consistency across datasets, making it easier to work with time-related information. The conversion aligns with widely adopted practices in data processing.
+### 3. Concatenation of Yellow and Green Taxi Data
+'yellow' and 'green' taxi datasets are combined into one group called 'yellow_green.' as these both share identical columns. Additional column ('taxi_category') is added into output datafiles to tell them apart. This makes it easier to handle the data, avoids repetition, and simplifies the analysis process.
