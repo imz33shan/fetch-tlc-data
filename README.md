@@ -70,11 +70,11 @@ Enforces constraints specific to the 'zone-ids' data category, ensuring that 'st
 Requires that 'start_timestamp' and 'end_timestamp' are not None, ensuring that a time range is specified for data categories other than 'zone-ids'.
 
 ## Key Decisions in Data Transformation
-### * Monthly Data Files for Easy Processing
+* ### Monthly Data Files for Easy Processing
 In an effort to streamline data processing and enhance user-friendliness, output data files are saved individually for each month. This approach simplifies analysis and storage, allowing for more efficient handling of data on a monthly basis. Each file follows a clear naming convention, indicating the data category and the specific month and year, promoting a well-organized and easily navigable dataset.
-### * Timestamp Format Conversion
+* ### Timestamp Format Conversion
 The original timestamp format in the dataset is transformed to UNIX format (in seconds). This change improves compatibility and consistency across datasets, making it easier to work with time-related information. The conversion aligns with widely adopted practices in data processing.
-### * Concatenation of Yellow and Green Taxi Data
+* ### Concatenation of Yellow and Green Taxi Data
 'yellow' and 'green' taxi datasets are combined into one group called 'yellow_green.' as these both share identical columns. Additional column ('taxi_category') is added into output datafiles to tell them apart. This makes it easier to handle the data, avoids repetition, and simplifies the analysis process.
 
 ## Structured Output Data Definition
