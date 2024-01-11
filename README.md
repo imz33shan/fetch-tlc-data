@@ -140,10 +140,10 @@ These naming conventions provide a clear structure, indicating the type of data 
 | hvfhs_license_num     | String           |
 | dispatching_base_num  | String           |
 | originating_base_num  | String           |
-| request_datetime      | DateTime         |
-| on_scene_datetime     | DateTime         |
-| pickup_datetime       | DateTime         |
-| dropoff_datetime      | DateTime         |
+| request_datetime      | Integer          |
+| on_scene_datetime     | Integer          |
+| pickup_datetime       | Integer          |
+| dropoff_datetime      | Integer          |
 | PULocationID          | Integer          |
 | DOLocationID          | Integer          |
 | trip_miles            | Float            |
