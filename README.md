@@ -69,7 +69,7 @@ Enforces constraints specific to the 'zone-ids' data category, ensuring that 'st
 * **Constraints for Timestamps:**
 Requires that 'start_timestamp' and 'end_timestamp' are not None, ensuring that a time range is specified for data categories other than 'zone-ids'.
 
-## Key Decisions in Data Transformation
+## Key Decisions in Data Extraction/Transformation
 * ### Monthly Data Files for Easy Processing
 In an effort to streamline data processing and enhance user-friendliness, output data files are saved individually for each month. This approach simplifies analysis and storage, allowing for more efficient handling of data on a monthly basis. Each file follows a clear naming convention, indicating the data category and the specific month and year, promoting a well-organized and easily navigable dataset.
 * ### Timestamp Format Conversion
