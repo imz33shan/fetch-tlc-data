@@ -23,7 +23,7 @@ Once you have successfully installed the fetch-tlc-data module, you can use the 
 ```python
 # Extract datafiles for Yellow and Green taxis for Jan-2023 and Feb-2023 in avro file format
 
-from tlc_taxi_data import fetch_datafiles
+from tlc_taxi_data.fetch_tlc_taxi_data import fetch_datafiles
 from datetime import datetime
 import time
 
