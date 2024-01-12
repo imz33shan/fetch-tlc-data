@@ -32,7 +32,7 @@ start, end = datetime(2023,1,1), datetime(2023,2,28)
 start_time = int(time.mktime(start.timetuple()))
 end_time = int(time.mktime(end.timetuple()))
 
-out_loc = r".\data-files"
+out_loc = "./data-files"
 fetch_datafiles(data_category='yellow_green', start_timestamp=start_time, end_timestamp=end_time,
                 output_loc=out_loc, output_format=['avro'])
 ```
