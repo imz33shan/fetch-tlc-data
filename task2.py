@@ -1,3 +1,5 @@
+# Day of the week in 2019 and 2020 which has the lowest number of single rider trips
+
 from tlc_taxi_data.fetch_tlc_taxi_data import fetch_datafiles
 from datetime import datetime
 import time
