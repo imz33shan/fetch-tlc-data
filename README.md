@@ -11,9 +11,9 @@ The *fetch_datafiles* data pipeline is a versatile Python script designed to ret
 * **Robust Logging:** Incorporates logging functionality to capture progress, errors, and completion messages, aiding in troubleshooting and monitoring.
 
 ## Installation
-This module requires Python3.9 or greater and can be installed directly from GitHub using pip. You will need a secret key which will be provided separately.
+This module requires Python3.9 or greater and can be installed directly from GitHub using pip.
 ```bash
-pip install git+https://<github-secret-key>@github.com/imz33shan/fetch-tlc-data.git
+pip install git+https://github.com/imz33shan/fetch-tlc-data.git
 ```
 
 ## Usage
